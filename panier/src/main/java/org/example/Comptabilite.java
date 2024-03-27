@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class Comptabilite {
+public class Comptabilite implements ActionPanier {
     private String comptabilite;
 
     public Comptabilite(String pComptabilite) {

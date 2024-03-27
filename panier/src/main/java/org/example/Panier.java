@@ -1,14 +1,11 @@
 package org.example;
 
 import java.util.ArrayList;
-public class Panier {
-    private GestionDeStock stock;
-    private Comptabilite compta;
+public class Panier extends PanierObservable {
+
     private String contenu;
 
-    public Panier (GestionDeStock pStock, Comptabilite pCompta) {
-        this.stock = pStock;
-        this.compta = pCompta;
+    public Panier () {
         this.contenu = new String ("Contenu du panier");
     }
 
@@ -16,8 +13,11 @@ public class Panier {
         return this.contenu;
     };
 
+    public void setContenu(String pContenu) {
+        this.contenu = pContenu;
+    }
+
     public void declencherCommande() {
-        this.stock.traite(this.contenu);
-        this.compta.traite(this.contenu);
+        this.faireTraiter(this.contenu);
     }
 }

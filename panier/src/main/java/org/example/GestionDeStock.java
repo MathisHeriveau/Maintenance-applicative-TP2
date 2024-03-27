@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class GestionDeStock {
+public class GestionDeStock implements ActionPanier {
     private String gestionStock;
 
     public GestionDeStock(String pGestionStock) {
